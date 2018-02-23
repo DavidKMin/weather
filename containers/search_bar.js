@@ -32,8 +32,8 @@ class SearchBar extends Component {
             <form onSubmit={this.onFormSubmit} className="input-group">
                 <input
                     placeholder="Get a five-day forecast in your favorite cities"
-                    className="form-ctonrol"
-                    value={this.state.term} 
+                    className="form-control"
+                    value={this.state.term}
                     onChange={this.onInputChange} />
                 <span className="input-group-btn">
                     <button type="submit" className="btn btn-secondary">Submit</button>
@@ -41,13 +41,13 @@ class SearchBar extends Component {
             </form>
         );
     }
-} 
+}
 
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchWeather }, dispatch);
-} 
+}
 
-// First argument to pass a state which is used by redux which 
+// First argument to pass a state which is used by redux which
 // we don't care here
 export default connect(null, mapDispatchToProps)(SearchBar);
